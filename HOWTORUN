@@ -1,0 +1,10 @@
+
+gInterpreter->AddIncludePath("/home/phazarik/mcgeneration/delphes");
+gInterpreter->AddIncludePath("/home/phazarik/mcgeneration/delphes/external");
+gSystem->Load("/home/phazarik/mcgeneration/delphes/libDelphes.so");
+.L delAna.C+
+.x ana.C(0)
+
+TTree *delphesTree = (TTree*)_file0->Get("Delphes")
+delphesTree->MakeSelector("delAna")
+
