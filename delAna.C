@@ -129,8 +129,8 @@ Bool_t delAna::Process(Long64_t entry)
 
   time(&buffer);
   double time_taken_so_far = double(buffer-start);
-  if(_verbosity==0 && nEvtTotal%10==0)     cout<<nEvtTotal<<" \t "<<time_taken_so_far<<endl;
-  else if(_verbosity>0 && nEvtTotal%10==0) cout<<nEvtTotal<<" \t "<<time_taken_so_far<<endl;
+  if(_verbosity==0 && nEvtTotal%1000==0)     cout<<nEvtTotal<<" \t "<<time_taken_so_far<<endl;
+  else if(_verbosity>0 && nEvtTotal%1000==0) cout<<nEvtTotal<<" \t "<<time_taken_so_far<<endl;
 
   nEvtTotal++;
 
@@ -210,6 +210,27 @@ Bool_t delAna::Process(Long64_t entry)
       LightLepton.push_back(temp);
     }  
   }
+
+  //Electrons:
+  for(int i=0; i<(int)*Electron_size; i++){
+    Particle temp;
+    temp.v.SetPtEtaPhiM(Electron_PT[i], Electron_Eta[i], Electron_Phi[i], 0.105);
+    temp.charge = Electron_Charge[i];
+    temp.isolation = Electron_IsolationVar[i];
+    temp.status = 1; //default
+    temp.pdgid = 13*Electron_Charge[i]; //Setting by hand
+    temp.mid_1 = 0; //default
+    temp.mid_2 = 0; //default
+    temp.did_1 = 0; //default
+    temp.did_2 = 0; //default
+    temp.index = i;
+
+    bool passcuts = true;
+    if(passcuts){
+      Electron.push_back(temp);
+      LightLepton.push_back(temp);
+    }  
+  }
   
   if(nEvtTotal == test_evt){
     cout<<"--------------------------------------------\n"<<endl;
@@ -226,6 +247,17 @@ Bool_t delAna::Process(Long64_t entry)
   if((int)LightLepton.size() > 1){
     float dilepton_mass = (LightLepton.at(0).v + LightLepton.at(1).v).M();
     h.hist[0]->Fill(dilepton_mass);
+
+    if((int)Electron.size() > 1){
+      float dielectron_mass = (Electron.at(0).v + Electron.at(1).v).M();
+      h.hist[1]->Fill(dielectron_mass);
+    }
+
+    if((int)Muon.size() > 1){
+      float dimuon_mass = (Muon.at(0).v + Muon.at(1).v).M();
+      h.hist[2]->Fill(dimuon_mass);
+    }
+    
   }
   
 

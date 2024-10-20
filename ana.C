@@ -28,7 +28,7 @@ void ana(int sample=0){
   delAna m_selec;
   
   if(sample==0){//EGamma data
-    chain->Add("../test_output.root");
+    chain->Add("inputs/ppToZToLL_10K.root");
     hstfilename = "outputs/hst_ppToZToLL.root";
     sumfilename = "outputs/sum_ppToZToLL.txt";
   }

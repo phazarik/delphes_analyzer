@@ -301,21 +301,22 @@ public :
   TTreeReaderArray<TLorentzVector> GenJet_SoftDroppedJet = {fReader, "GenJet.SoftDroppedJet"};
   TTreeReaderArray<TLorentzVector> GenJet_SoftDroppedSubJet1 = {fReader, "GenJet.SoftDroppedSubJet1"};
   TTreeReaderArray<TLorentzVector> GenJet_SoftDroppedSubJet2 = {fReader, "GenJet.SoftDroppedSubJet2"};
-  /*
-  TTreeReaderArray<unsigned int> GenJet_TrimmedP4 = {fReader, "GenJet.TrimmedP4[5]"};
-  TTreeReaderArray<unsigned int> GenJet_PrunedP4 = {fReader, "GenJet.PrunedP4[5]"};
-  TTreeReaderArray<unsigned int> GenJet_SoftDroppedP4 = {fReader, "GenJet.SoftDroppedP4[5]"};
-  TTreeReaderArray<unsigned int> GenJet_NSubJetsTrimmed = {fReader, "GenJet.NSubJetsTrimmed"};
-  TTreeReaderArray<Double_t> GenJet_NSubJetsPruned = {fReader, "GenJet.NSubJetsPruned"};
-  TTreeReaderArray<Double_t> GenJet_NSubJetsSoftDropped = {fReader, "GenJet.NSubJetsSoftDropped"};
+  TTreeReaderArray<TLorentzVector> GenJet_TrimmedP4 = {fReader, "GenJet.TrimmedP4[5]"};
+  TTreeReaderArray<TLorentzVector> GenJet_PrunedP4 = {fReader, "GenJet.PrunedP4[5]"};
+  TTreeReaderArray<TLorentzVector> GenJet_SoftDroppedP4 = {fReader, "GenJet.SoftDroppedP4[5]"};
+  TTreeReaderArray<Int_t> GenJet_NSubJetsTrimmed = {fReader, "GenJet.NSubJetsTrimmed"};
+  TTreeReaderArray<Int_t> GenJet_NSubJetsPruned = {fReader, "GenJet.NSubJetsPruned"};
+  TTreeReaderArray<Int_t> GenJet_NSubJetsSoftDropped = {fReader, "GenJet.NSubJetsSoftDropped"};
   TTreeReaderArray<Double_t> GenJet_ExclYmerge12 = {fReader, "GenJet.ExclYmerge12"};
-  TTreeReaderArray<unsigned int> GenJet_ExclYmerge34 = {fReader, "GenJet.ExclYmerge34"};
-  TTreeReaderArray<unsigned int> GenJet_ExclYmerge45 = {fReader, "GenJet.ExclYmerge45"};
-  TTreeReaderArray<unsigned int> GenJet_ExclYmerge56 = {fReader, "GenJet.ExclYmerge56"};
-  TTreeReaderArray<unsigned int> GenJet_Constituents = {fReader, "GenJet.Constituents"};
-  TTreeReaderArray<Double_t> GenJet_Particles = {fReader, "GenJet.Particles"};
-  TTreeReaderArray<Double_t> GenJet_Area = {fReader, "GenJet.Area"};*/
+  TTreeReaderArray<Double_t> GenJet_ExclYmerge34 = {fReader, "GenJet.ExclYmerge34"};
+  TTreeReaderArray<Double_t> GenJet_ExclYmerge45 = {fReader, "GenJet.ExclYmerge45"};
+  TTreeReaderArray<Double_t> GenJet_ExclYmerge56 = {fReader, "GenJet.ExclYmerge56"};
+  TTreeReaderArray<TRefArray> GenJet_Constituents = {fReader, "GenJet.Constituents"};
+  TTreeReaderArray<TRefArray> GenJet_Particles = {fReader, "GenJet.Particles"};
+  TTreeReaderArray<TLorentzVector> GenJet_Area = {fReader, "GenJet.Area"};
   TTreeReaderValue<Int_t> GenJet_size = {fReader, "GenJet_size"};
+
+  //GenMET
   TTreeReaderArray<unsigned int> GenMissingET_fUniqueID = {fReader, "GenMissingET.fUniqueID"};
   TTreeReaderArray<unsigned int> GenMissingET_fBits = {fReader, "GenMissingET.fBits"};
   TTreeReaderArray<Float_t> GenMissingET_MET = {fReader, "GenMissingET.MET"};
@@ -353,21 +354,20 @@ public :
   TTreeReaderArray<TLorentzVector> Jet_SoftDroppedJet = {fReader, "Jet.SoftDroppedJet"};
   TTreeReaderArray<TLorentzVector> Jet_SoftDroppedSubJet1 = {fReader, "Jet.SoftDroppedSubJet1"};
   TTreeReaderArray<TLorentzVector> Jet_SoftDroppedSubJet2 = {fReader, "Jet.SoftDroppedSubJet2"};
-  /*
-  TTreeReaderArray<unsigned int> Jet_TrimmedP4 = {fReader, "Jet.TrimmedP4[5]"};
-  TTreeReaderArray<unsigned int> Jet_PrunedP4 = {fReader, "Jet.PrunedP4[5]"};
-  TTreeReaderArray<unsigned int> Jet_SoftDroppedP4 = {fReader, "Jet.SoftDroppedP4[5]"};
-  TTreeReaderArray<unsigned int> Jet_NSubJetsTrimmed = {fReader, "Jet.NSubJetsTrimmed"};
-  TTreeReaderArray<Double_t> Jet_NSubJetsPruned = {fReader, "Jet.NSubJetsPruned"};
-  TTreeReaderArray<Double_t> Jet_NSubJetsSoftDropped = {fReader, "Jet.NSubJetsSoftDropped"};
+  TTreeReaderArray<TLorentzVector> Jet_TrimmedP4 = {fReader, "Jet.TrimmedP4[5]"};
+  TTreeReaderArray<TLorentzVector> Jet_PrunedP4 = {fReader, "Jet.PrunedP4[5]"};
+  TTreeReaderArray<TLorentzVector> Jet_SoftDroppedP4 = {fReader, "Jet.SoftDroppedP4[5]"};
+  TTreeReaderArray<Int_t> Jet_NSubJetsTrimmed = {fReader, "Jet.NSubJetsTrimmed"};
+  TTreeReaderArray<Int_t> Jet_NSubJetsPruned = {fReader, "Jet.NSubJetsPruned"};
+  TTreeReaderArray<Int_t> Jet_NSubJetsSoftDropped = {fReader, "Jet.NSubJetsSoftDropped"};
   TTreeReaderArray<Double_t> Jet_ExclYmerge12 = {fReader, "Jet.ExclYmerge12"};
-  TTreeReaderArray<unsigned int> Jet_ExclYmerge34 = {fReader, "Jet.ExclYmerge34"};
-  TTreeReaderArray<unsigned int> Jet_ExclYmerge45 = {fReader, "Jet.ExclYmerge45"};
-  TTreeReaderArray<unsigned int> Jet_ExclYmerge56 = {fReader, "Jet.ExclYmerge56"};
-  TTreeReaderArray<unsigned int> Jet_Constituents = {fReader, "Jet.Constituents"};
-  TTreeReaderArray<Double_t> Jet_Particles = {fReader, "Jet.Particles"};
-  TTreeReaderArray<Double_t> Jet_Area = {fReader, "Jet.Area"};
-  TTreeReaderValue<Int_t> Jet_size = {fReader, "Jet_size"};*/
+  TTreeReaderArray<Double_t> Jet_ExclYmerge34 = {fReader, "Jet.ExclYmerge34"};
+  TTreeReaderArray<Double_t> Jet_ExclYmerge45 = {fReader, "Jet.ExclYmerge45"};
+  TTreeReaderArray<Double_t> Jet_ExclYmerge56 = {fReader, "Jet.ExclYmerge56"};
+  TTreeReaderArray<TRefArray> Jet_Constituents = {fReader, "Jet.Constituents"};
+  TTreeReaderArray<TRefArray> Jet_Particles = {fReader, "Jet.Particles"};
+  TTreeReaderArray<TLorentzVector> Jet_Area = {fReader, "Jet.Area"};
+  TTreeReaderValue<Int_t> Jet_size = {fReader, "Jet_size"};
 
   //Electrons:
   TTreeReaderArray<unsigned int> Electron_fUniqueID = {fReader, "Electron.fUniqueID"};
@@ -463,21 +463,20 @@ public :
   TTreeReaderArray<TLorentzVector> FatJet_SoftDroppedJet = {fReader, "FatJet.SoftDroppedJet"};
   TTreeReaderArray<TLorentzVector> FatJet_SoftDroppedSubJet1 = {fReader, "FatJet.SoftDroppedSubJet1"};
   TTreeReaderArray<TLorentzVector> FatJet_SoftDroppedSubJet2 = {fReader, "FatJet.SoftDroppedSubJet2"};
-  /*
-  TTreeReaderArray<unsigned int> FatJet_TrimmedP4 = {fReader, "FatJet.TrimmedP4[5]"};
-  TTreeReaderArray<unsigned int> FatJet_PrunedP4 = {fReader, "FatJet.PrunedP4[5]"};
-  TTreeReaderArray<unsigned int> FatJet_SoftDroppedP4 = {fReader, "FatJet.SoftDroppedP4[5]"};
-  TTreeReaderArray<unsigned int> FatJet_NSubJetsTrimmed = {fReader, "FatJet.NSubJetsTrimmed"};
-  TTreeReaderArray<Double_t> FatJet_NSubJetsPruned = {fReader, "FatJet.NSubJetsPruned"};
-  TTreeReaderArray<Double_t> FatJet_NSubJetsSoftDropped = {fReader, "FatJet.NSubJetsSoftDropped"};
+  TTreeReaderArray<TLorentzVector> FatJet_TrimmedP4 = {fReader, "FatJet.TrimmedP4[5]"};
+  TTreeReaderArray<TLorentzVector> FatJet_PrunedP4 = {fReader, "FatJet.PrunedP4[5]"};
+  TTreeReaderArray<TLorentzVector> FatJet_SoftDroppedP4 = {fReader, "FatJet.SoftDroppedP4[5]"};
+  TTreeReaderArray<Int_t> FatJet_NSubJetsTrimmed = {fReader, "FatJet.NSubJetsTrimmed"};
+  TTreeReaderArray<Int_t> FatJet_NSubJetsPruned = {fReader, "FatJet.NSubJetsPruned"};
+  TTreeReaderArray<Int_t> FatJet_NSubJetsSoftDropped = {fReader, "FatJet.NSubJetsSoftDropped"};
   TTreeReaderArray<Double_t> FatJet_ExclYmerge12 = {fReader, "FatJet.ExclYmerge12"};
-  TTreeReaderArray<unsigned int> FatJet_ExclYmerge34 = {fReader, "FatJet.ExclYmerge34"};
-  TTreeReaderArray<unsigned int> FatJet_ExclYmerge45 = {fReader, "FatJet.ExclYmerge45"};
-  TTreeReaderArray<unsigned int> FatJet_ExclYmerge56 = {fReader, "FatJet.ExclYmerge56"};
-  TTreeReaderArray<unsigned int> FatJet_Constituents = {fReader, "FatJet.Constituents"};
-  TTreeReaderArray<Double_t> FatJet_Particles = {fReader, "FatJet.Particles"};
-  TTreeReaderArray<Double_t> FatJet_Area = {fReader, "FatJet.Area"};
-  TTreeReaderValue<Int_t> FatJet_size = {fReader, "FatJet_size"};*/
+  TTreeReaderArray<Double_t> FatJet_ExclYmerge34 = {fReader, "FatJet.ExclYmerge34"};
+  TTreeReaderArray<Double_t> FatJet_ExclYmerge45 = {fReader, "FatJet.ExclYmerge45"};
+  TTreeReaderArray<Double_t> FatJet_ExclYmerge56 = {fReader, "FatJet.ExclYmerge56"};
+  TTreeReaderArray<TRefArray> FatJet_Constituents = {fReader, "FatJet.Constituents"};
+  TTreeReaderArray<TRefArray> FatJet_Particles = {fReader, "FatJet.Particles"};
+  TTreeReaderArray<TLorentzVector> FatJet_Area = {fReader, "FatJet.Area"};
+  TTreeReaderValue<Int_t> FatJet_size = {fReader, "FatJet_size"};
 
   //MET:
   TTreeReaderArray<unsigned int> MissingET_fUniqueID = {fReader, "MissingET.fUniqueID"};
@@ -545,7 +544,7 @@ private:
   const char *_HstFileName;
   const char *_SumFileName;
   int _verbosity;
-  float metpt, metphi;
+  float metpt, meteta, metphi;
 
   vector<Particle> genElectron, genMuon, genLightLepton; //gen-level objects
   vector<Particle> Electron, Muon, LightLepton; //reco-level objects

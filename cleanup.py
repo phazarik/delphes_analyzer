@@ -12,7 +12,7 @@ junk = [
     "*d"
 ]
 
-if args.all : junk.append("outputs/*")
+if args.all : junk.extend(["outputs/*root", "outputs/*txt"])
 
 print("Running the following commands ...")
 for item in junk:
